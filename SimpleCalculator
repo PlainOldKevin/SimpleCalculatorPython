@@ -37,8 +37,8 @@ for key in operations:
 choice = input("Choose an operation above to run on the two numbers: ")
 
 # Confirm valid choice
-while choice != "+" or "-" or "*" or "/":
-    print("Try again.")
+while choice != "+" and choice != "-" and choice != "*" and choice != "/":
+    print("Invalid Input. Try again.")
     for key in operations:
         print(key)
     choice = input("Choose an operation above to run on the two numbers: ")
