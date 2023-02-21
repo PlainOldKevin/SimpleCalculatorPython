@@ -18,9 +18,27 @@ def divide(n1, n2):
     return n1 / n2
 
 # Dictionary for math functions
-functions = {
-    "+": "add",
-    "-": "subtract",
-    "*": "multiply",
-    "/": "divide",
+operations = {
+    "+": add,
+    "-": subtract,
+    "*": multiply,
+    "/": divide,
 }
+
+# Ask user for input
+num1 = input("What's the first number? ")
+num2 = input("What's the second number? ")
+
+# Print available operations
+for key in operations:
+    print(key)
+
+# Ask user for desired operation
+choice = input("Choose an operation above to run on the two numbers: ")
+
+# Confirm valid choice
+while choice != "+" or "-" or "*" or "/":
+    print("Try again.")
+    for key in operations:
+        print(key)
+    choice = input("Choose an operation above to run on the two numbers: ")
