@@ -1,0 +1,19 @@
+
+
+
+
+# Addition function
+def add(n1, n2):
+    return n1 + n2
+
+# Subtraction function
+def subtract(n1, n2):
+    return n1 - n2
+
+# Multiplication function
+def multiply(n1, n2):
+    return n1 * n2
+
+# Division function
+def divide(n1, n2):
+    return n1 / n2
