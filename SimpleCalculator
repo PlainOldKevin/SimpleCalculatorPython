@@ -1,7 +1,6 @@
 
 
 
-
 # Addition function
 def add(n1, n2):
     return n1 + n2
@@ -17,3 +16,11 @@ def multiply(n1, n2):
 # Division function
 def divide(n1, n2):
     return n1 / n2
+
+# Dictionary for math functions
+functions = {
+    "+": "add",
+    "-": "subtract",
+    "*": "multiply",
+    "/": "divide",
+}
