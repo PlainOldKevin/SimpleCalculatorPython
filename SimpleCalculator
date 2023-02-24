@@ -69,7 +69,7 @@ def calculate():
                 if ans == 'yes':
                     calculate()
                 else:
-                    print("***Console cleared***")
+                    print("***Storage cleared***")
                     end == 'false'
 
 calculate()
