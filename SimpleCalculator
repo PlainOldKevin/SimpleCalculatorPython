@@ -25,38 +25,48 @@ operations = {
     "/": division,
 }
 
-# Ask user for input
-num1 = int(input("What's the first number? "))
+# Add the ability to start new calculation
+def calculate():
 
-# Print available operations
-for key in operations:
-    print(key)
+    # Ask user for input
+    num1 = int(input("What's the first number? "))
 
-# Add functionality for multiple numbers with while loop
-end = 'yes'
-while end == 'yes':
-        # Ask user for desired operation
-        choice = input("Choose an operation from the line above: ")
+    # Print available operations
+    for key in operations:
+        print(key)
 
-        # Confirm valid choice
-        while choice != "+" and choice != "-" and choice != "*" and choice != "/":
-            print("Invalid Input. Try again.")
-            for key in operations:
-                print(key)
-            choice = input("Choose an operation above to run: ")
+    # Add functionality for multiple numbers with while loop
+    end = 'yes'
+    while end == 'yes':
+            # Ask user for desired operation
+            choice = input("Choose an operation from the line above: ")
 
-        # Ask user for second number
-        num2 = int(input("What's the next number? "))
+            # Confirm valid choice
+            while choice != "+" and choice != "-" and choice != "*" and choice != "/":
+                print("Invalid Input. Try again.")
+                for key in operations:
+                    print(key)
+                choice = input("Choose an operation above to run: ")
 
-        # Calculate answer
-        answer = operations[choice](num1, num2)
+            # Ask user for second number
+            num2 = int(input("What's the next number? "))
 
-        # Print result for user
-        print(f"{num1} {choice} {num2} = {answer}")
+            # Calculate answer
+            answer = operations[choice](num1, num2)
 
-        # Check when user wants to execute operation
-        end = input(f"Do you want to perform an operation on another number with {answer}? Type 'yes' or 'no'. ")
-        if end == 'yes':
-            num1 = answer
-        else:
-            end == 'no'
+            # Print result for user
+            print(f"{num1} {choice} {num2} = {answer}")
+
+            # Check when user wants to execute another operation (new or existing)
+            end = input(f"Do you want to perform an operation on another number with {answer}? Type 'yes' or 'no'. ")
+            if end == 'yes':
+                num1 = answer
+            elif end == 'no':
+                ans = input("Do you wish to start a new calculation? Type 'yes' or 'no'. ")
+                if ans == 'yes':
+                    calculate()
+                else:
+                    print("***Console cleared***")
+                    end == 'false'
+
+calculate()
