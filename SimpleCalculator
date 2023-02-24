@@ -1,5 +1,5 @@
 # Calculator
-
+from art import logo
 
 # Addition function
 def addition(n1, n2):
@@ -24,6 +24,9 @@ operations = {
     "*": multiplication,
     "/": division,
 }
+
+# Print calculator logo
+print(logo)
 
 # Add the ability to start new calculation
 def calculate():
